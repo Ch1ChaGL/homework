@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sass+элементы</title>
+    <link rel="stylesheet" href="../sass+элементы/css/style.css">
+</head>
+<body>
+    <div class="container">
+       <div class="container-top">
+        <div class="container-top__title">
+            <h1 class="container-top__items">
+                30 CSS селекторов, которые я должен запомнить
+            </h1>
+        </div>
+        <div class="container-top__hr"></div>
+        <div class="container-top__subtitle">
+            <p class="container-top__text"></p>
+                Итак, вы изучили принцип наследования и основные селекторы: id и class - и думаете, что готовы к бою? Но, поверьте, вы очень многое упустили. Несмотря на то, что многие из описанных в этой статье селекторов являются частью спецификации CSS3, и поддерживаются только современными браузерами, вы просто обязаны их знать.
+            </p>
+        </div>
+       </div>
+       <div class="container-main">
+        <div class="container-main__items">
+            <h2 class="container-main__title">1. *</h2>
+<pre>*{
+    margin:0;
+    padding:0;
+            }
+</pre>
+            <p>Начнём с самого простого.</p>
+            <p>Универсальный селектор соответствует любому элементу на странице. Часто разработчики используют его для обнуления свойств margin и padding. Это допустимо в тестовом режиме, но я не рекомендую использовать этот селектор в рабочих проектах. Он слишком нагружает браузер.</p>
+            <p>Универсальный селектор * также можно использовать для стилизации всех потомков элемента.</p>
+<pre>#container * {
+    border: 1px solid black;
+   }</pre>
+   <p>В данном примере стиль применится ко всем потомкам элемента #container div. Но, повторюсь, не стоит использовать эту технику слишком часто, а лучше вообще её не использова</p>
+        </div>
+        <div class="container-main__items">
+            <h2 class="container-main__title">2. #X</h2>
+            <pre>#container {
+                width: 960px;
+                margin: auto;
+               }</pre>
+            <p>Использование символа решётки позволяет обратиться к уникальному идентификатору элемента id. Но старайтесь не злоупотреблять использованием идентификаторов.</p>
+            <p class="container-main__text">Спросите себя: мне действительно нужно использовать id для этого элемента?</p>
+            <p>Идентификатор id должен быть уникальным и может использоваться на странице только один раз. При возможности старайтесь обходиться без идентификаторов. Старайтесь использовать тэги или псевдоклассы.</p>
+        </div>
+       </div>
+    </div>
+</body>
+</html>
