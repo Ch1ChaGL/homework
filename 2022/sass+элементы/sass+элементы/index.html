@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="../sass+элементы/css/style.css">
 </head>
 <body>
-    <div class="container">
-       <div class="container-top">
+<div class="container">
+    <div class="container-top">
         <div class="container-top__title">
             <h1 class="container-top__items">
                 30 CSS селекторов, которые я должен запомнить
@@ -21,9 +21,9 @@
                 Итак, вы изучили принцип наследования и основные селекторы: id и class - и думаете, что готовы к бою? Но, поверьте, вы очень многое упустили. Несмотря на то, что многие из описанных в этой статье селекторов являются частью спецификации CSS3, и поддерживаются только современными браузерами, вы просто обязаны их знать.
             </p>
         </div>
-       </div>
-       <div class="container-main">
-        <div class="container-main__items">
+    </div>
+    <div class="container-main">
+        <div class="container-main__items items1">
             <h2 class="container-main__title">1. *</h2>
 <pre>*{
     margin:0;
@@ -38,7 +38,7 @@
    }</pre>
    <p>В данном примере стиль применится ко всем потомкам элемента #container div. Но, повторюсь, не стоит использовать эту технику слишком часто, а лучше вообще её не использова</p>
         </div>
-        <div class="container-main__items">
+        <div class="container-main__items items2">
             <h2 class="container-main__title">2. #X</h2>
             <pre>#container {
                 width: 960px;
@@ -48,7 +48,125 @@
             <p class="container-main__text">Спросите себя: мне действительно нужно использовать id для этого элемента?</p>
             <p>Идентификатор id должен быть уникальным и может использоваться на странице только один раз. При возможности старайтесь обходиться без идентификаторов. Старайтесь использовать тэги или псевдоклассы.</p>
         </div>
-       </div>
+        <div class="container-main__items items3">
+            <h2 class="container-main__title">7. X + Y</h2>
+<pre>ul + p {
+color: red;
+}</pre>
+        <p>Это соседний селектор. Он поможет нам выбрать только тот элемент, который следует сразу же за указанным элементом. В этом примере мы выберем только первый параграф текста, следующий сразу за тэгом ul.</p>
+        <div class="container-main__example example3">
+            <ul>
+                <li>Lorem, ipsum dolor.</li>
+                <li>Lorem, ipsum dolor.</li>
+                <li>Lorem, ipsum dolor.</li>
+                <li>Lorem, ipsum dolor.</li>
+            </ul>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit..</p>
+        </div>
+        </div>
+        <div class="container-main__items items4">
+            <h2 class="container-main__title">8. X > Y</h2>
+<pre>
+    div#container > ul {
+        border: 1px solid black;
+        }
+</pre>      <p>Разница между селекторами X Y и X > Y в том, что в последнем примере мы выберем только прямого потомка. Например, у нас есть такой код.</p>
+<pre>
+    div id="container">
+        ul>
+           li> List Item
+             ul>
+                li> Child </li>
+             /ul>
+           /li>
+           li> List Item </li>
+           li> List Item </li>
+           li> List Item </li>
+        ./ul>
+     /div>
+</pre>
+            <p>Селектор #container > ul выберет только тот элемент ul, который является прямым потомком элемента div с id равным container. Он не выберет, например, элемент ul , являющийся потомком первого элемента li.</p>
+            <p>Данный способ выбора элементов является очень эффективным. Рекомендую вам использовать его, особенно при работе с JavaScript.</p>
+            <div class="container-main__example example4">
+                        <div class="example4__items">
+                            <ul>
+                                <li>List Item
+                                    <ul>
+                                        <li>Child</li>
+                                    </ul>
+                                </li>
+                                <li>List Item</li>
+                                <li>List Item</li>
+                                <li>List Item</li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                        </div>
+            </div>
+        </div>
+        <div class="container-main__items items5">
+            <h2 class="container-main__title">9. X ~ Y</h2>
+<pre>
+    ul ~ p {
+        color: red;
+       }
+</pre>
+            <p>Этот селектор похож на X + Y, но он менее строгий. Соседний селектор (ul + p) выберет только первый элемент, следующий сразу же за указанным элементом. Селектор X ~ Y выберет все элементы p, расположенные после элемента ul</p>
+            <div class="container-main__example example5">
+                <div class="example5__items">
+                    <ul>
+                        <li>
+                            List Item
+                            <ul>
+                                <li>Child</li>
+                                <li>Child</li>
+                                <li>Child</li>
+                            </ul>
+                        </li>
+                        <li>List Item</li>
+                        <li>List Item</li>
+                        <li>List Item</li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-main__items items6">
+            <h2 class="container-main__title">10. X[title]</h2>
+<pre>
+    a[title] {
+        color: green;
+       }
+</pre>
+            <p>Это селектор атрибутов. Он выберет только те ссылки, у которых имеется указанный атрибут title. Но что, если вам нужно что-то более конкретное? Что же...</p>
+            <div class="container-main__example example6">
+                <div class="example6__items">
+                    <ul>
+                        <li>
+                            List Item
+                            <ul>
+                                <li>Child</li>
+                                <li>Child</li>
+                                <li>Child</li>
+                            </ul>
+                        </li>
+                        <li>List Item</li>
+                        <li>List Item</li>
+                        <li>List Item</li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet, <a href="#" hui="123">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, <a href="#" hui="234">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 </body>
 </html>
