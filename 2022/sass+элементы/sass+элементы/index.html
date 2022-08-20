@@ -166,6 +166,285 @@ color: red;
                 </div>
             </div>
         </div>
+        <div class="container-main__items items7">
+            <h2 class="container-main__title">11. X[href="foo"]</h2>
+<pre>
+    a[href="http://net.tutsplus.com"] {
+        color: #1f6053; /* nettuts green */
+        }
+</pre>
+            <p>Указанный выше код выберет все ссылки, указывающие на http://net.tutsplus.com. Они окрасятся в зелёный цвет. Стиль остальных ссылок останется без изменений.</p>
+            <p class="container-main__text">Не забудьте, что значение атрибута нужно заключать в кавычки. Особенно внимательны будьте при использовании JavaScript.</p>
+            <p>Этот метод отлично работает, но он слишком строгий. Что, если ссылка указывает на Nettuts+, но путь прописан как nettuts.com? В этом случае мы можем использовать синтаксис регулярных выражений.</p>
+            <div class="container-main__example example7">
+                <div class="example7__items">
+                    <ul>
+                        <li>
+                            List Item
+                            <ul>
+                                <li>Child</li>
+                                <li>Child</li>
+                                <li>Child</li>
+                            </ul>
+                        </li>
+                        <li>List Item</li>
+                        <li>List Item</li>
+                        <li>List Item</li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet, <a href="#" hui="123">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, <a href="#" hui="234">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, <a href="https://github.com/Ch1ChaGL?tab=packages">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                </div>
+                </div>
+        </div>
+        <div class="container-main__items items8">
+            <h2 class="container-main__title">12. X[href*="nettuts"]</h2>
+<pre>
+    a[href*="tuts"] {
+        color: #1f6053; <span>/* nettuts green */<span>
+        }
+</pre>
+            <p>Вот то, что нам нужно. Звёздочка означает, что указанное значение должно быть частью указанного атрибута. Поэтому этот селектор выберет и nettuts.com, и net.tutsplus.com,, и даже tutsplus.com.</p>
+            <p>Но помните, что этот способ слишком обширен. Что, если у вас будет ссылка, не указывающая на tuts+, но имеющая в адресе слово tuts? Для составления более строго правила используйте ^ и $, указывающие на начало и конец строки соответственно.</p>
+            <div class="container-main__example example8">
+                <div class="example8__items">
+                    <p>Lorem ipsum dolor sit amet, <a href="#" hui="123">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, <a href="#" hui="234">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, <a href="https://github.com/Ch1ChaGL?tab=packages">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-main__items items9">
+            <h2 class="container-main__title">13. X[href^="http"]</h2>
+<pre>
+    a[href^="http"] {
+        background: url(path/to/external/icon.png) no-repeat;
+        padding-left: 10px;
+       }
+</pre>
+            <p>Вам было интересно как на некоторых сайтах реализован показ иконки возле внешних ссылок? Уверен, вы встречали подобное. Иконка напоминает, что это внешняя ссылка, которая переведёт вас на другой сайт.</p>
+            <p>Это как раз случай использования символа ^. В регулярных выражениях он используется для указания начала строки. Если мы хотим выбрать все ссылки, начинающиеся с http, то мы можем использовать код из примера сверху.</p>
+            <p class="container-main__text">Учтите, что мы не ищем http://. В этом нет необходимости.</p>
+            <p>А что, если мы хотим стилизовать все ссылки, указывающие, например, на фото? В этом случае нас интересует конец строки.</p>
+            <div class="container-main__example example9">
+                <div class="example9__items">
+                    <p>Lorem ipsum dolor sit amet, <a href="#" hui="123">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, <a href="https://github.com/Ch1ChaGL?tab=packages">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, <a href="#" hui="234">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, <a href="https://github.com/Ch1ChaGL?tab=packages">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-main__items items10">
+            <h2 class="container-main__title">14. X[href$=".jpg"]</h2>
+<pre>
+    a[href$=".jpg"] {
+        color: red;
+       }
+</pre>
+            <p>Мы используем символ из регулярных выражений $, который указывает на конец строки. В этом случае мы ищем все ссылки на фото, т.е. путь в них должен заканчиваться на .jpg. Учтите, что это не сработает для файлов gif и png.</p>
+            <div class="container-main__example example10">
+                <div class="example10__items">
+                    <p>Lorem ipsum dolor sit amet, <a href="#" hui="123">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, <a href="hui.jpg">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, <a href="#" hui="234">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, <a href="Ch1ChaGL.jpg">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-main__items items11">
+            <h2 class="container-main__title">15. X[data-*="foo"]</h2>
+            <pre>
+                a[data-filetype="image"] {
+                    color: red;
+                   }
+            </pre>
+            <p>Как же нам выбрать все типы изображений, включая png, jpeg,jpg, gif? Мы можем создать такой селектор:</p>
+            <pre>
+                a[href$=".jpg"],
+                a[href$=".jpeg"],
+                a[href$=".png"],
+                a[href$=".gif"] {
+                color: red;
+                }
+            </pre>
+            <p>Но это очень громоздкая и неэффективная конструкция. Другой вариант - использовать пользовательские атрибуты. Мы можем добавить атрибут data-filetype к каждой ссылке, указывающей на изображение.</p>
+            <pre> a href="path/to/image.jpg" data-filetype="image"> Image Link /a> </pre>
+            <p>Теперь мы можем использовать селектор атрибутов для выбора только этих ссылок.</p>
+            <pre>a[data-filetype="image"] {
+                color: red;
+               }
+            </pre>
+            <div class="container-main__example example11">
+                <div class="example11__items">
+                    <p>Lorem ipsum dolor sit amet, <a href="#" hui="123">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, <a href="https://github.com/Ch1ChaGL?tab=packages" data-fyletype="image">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, <a href="#" hui="234">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, <a href="https://github.com/Ch1ChaGL?tab=packages" data-fyletype="image">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-main__items items12">
+            <h2 class="container-main__title">16. X[foo~="bar"]</h2>
+<pre>
+    a[data-info~="external"] {
+        color: red;
+       }
+        
+       a[data-info~="image"] {
+        border: 1px solid black;
+       }
+</pre>      
+            <p>Вот пример, который поразит ваших коллег. Этот трюк известен очень немногим. Символ тильда (~) позволяет выбрать атрибут, в котором есть значения, разделённые пробелом.</p>
+            <p>Теперь мы можем создать атрибут data-info и использовать в нём любые значения, разделяя их пробелами. Для примера укажем, что ссылка у нас внешняя и ведёт на изображение.</p>
+            <pre>"a> href="path/to/image.jpg" data-info="external image"> Нажми на меня, дурашка ></pre>
+            <p>Этот код позволит нам выбрать любой элемент, имеющий в качестве значения атрибута любое нужное нам слово.</p>
+<pre>
+   <span>/* Выбираем атрибут data-info со значением "external" */</span> 
+a[data-info~="external"] {
+ color: red;
+}
+ 
+<span>/* Выбираем атрибут со значчением "image" */</span>
+a[data-info~="image"] {
+border: 1px solid black;
+}
+</pre>
+            <p>Прикольно, правда?</p>
+            <div class="container-main__example example12">
+                <div class="example12__items">
+                    <p>Lorem ipsum dolor sit amet, <a href="#" hui="hui pizda">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, <a href="https://github.com/Ch1ChaGL?tab=packages" data-info="external image">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, <a href="#" hui="hui pizda">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                    <p>Lorem ipsum dolor sit amet, <a href="https://github.com/Ch1ChaGL?tab=packages" data-info="external image">consectetur</a> adipisicing elit, sed do eiusmod tempor.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-main__items items13">
+            <h2 class="container-main__title">20. X:not(selector)</h2>
+<pre>div:not(#container) {
+    color: blue;
+   }</pre>
+            <p>Псевдокласс отрицания бывает очень полезен. Представьте, что вам нужно выбрать все тэги div, кроме одного с id равным container. Код выше сделает именно это.</p>
+            <p>Или, например, если я хочу выбрать каждый элемент на странице (не делайте так), кроме тэгов p.</p>
+<pre>
+    *:not(p) {
+        color: green;
+        }
+</pre>
+            <div class="container-main__example example13">
+                <div class="example13__items">
+                    <div id="test">
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, nulla.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, id obcaecati?</p>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, nulla.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, id obcaecati?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-main__items items14">
+            <h2 class="container-main__title">24. X:nth-of-type(n)</h2>
+<pre>ul:nth-of-type(3) {
+    border: 1px solid black;
+   }</pre>
+            <p>Бывает, что вместо наследников child вам нужно выбрать элементы по их типу.</p>
+            <p>Представьте, что у вас на странице есть пять списков. И вам нужно стилизовать только третий список. И у него нет уникального id. Тут вам и пригодится псевдокласс nth-of-type(n). В примере выше только у третьего списка будет рамка.</p>
+            <div class="container-main__example example14">
+                <div class="example14__items">
+                    <ul>
+                        <li>text1</li>
+                        <li>text1</li>
+                        <li>text1</li>
+                    </ul>
+                    <ul>
+                        <li>text2
+                            <ul><li>text2.1</li></ul>
+                        </li>
+                        <li>text2</li>
+                        <li>text2</li>
+                        <li>text2</li>
+                    </ul>
+                    <ul>
+                        <li>text3</li>
+                        <li>text3</li>
+                        <li>text3</li>
+                    </ul>
+                    <ul>
+                        <li>text4</li>
+                        <li>text4</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-main__items items15">
+            <h2 class="container-main__title">Test</h2>
+            <p>Для лучшего усвоения давайте пройдём тест. Скопируйте этот код в свой текстовый редактор:</p>
+            <pre>
+                div>
+                p> My paragraph here. /p>
+                ul>
+                   li> List Item 1 /li>
+                   li> List Item 2 /li>
+                /ul>
+                
+                ul>
+                   li> List Item 3 /li>
+                   li> List Item 4 /li>
+                /ul>   
+               /div>
+            </pre>
+            <p>Теперь, не читая дальше, попробуйте выбрать только элемент "List Item 2". Читайте дальше после того, как решите задачу (или сдадитесь).</p>
+            <h2>Решение 1</h2>
+            <div class="container-main__example example15">
+                <div class="example15__items">
+                    <div>
+                        <p> My paragraph here. </p>
+                        <ul>
+                           <li> List Item 1 </li>
+                           <li> List Item 2 </li>
+                        </ul>
+                        
+                        <ul>
+                           <li> List Item 3 </li>
+                           <li> List Item 4 </li>
+                        </ul>   
+                       </div>
+                </div>
+            </div>
+<pre>
+    .example15{
+        @include example(20px, Times,40px );
+        &__items{
+            & li{
+                margin-bottom: 5px;   
+            }
+            & p{
+                margin-bottom: 10px;   
+            }
+            & ul:first-of-type > li:last-child{
+                color:red;
+            }
+        }
+    }
+</pre>
+        </div>
     </div>
 </div>
 </body>
