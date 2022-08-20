@@ -215,6 +215,169 @@ body{
         color:green;
     }
     }
-    
+    .example7{
+        @include example(20px, Times,40px );
+        &__items ul > li{
+            margin-bottom: 30px; 
+    }
+        &__items li > ul{
+            margin:15px 0px 0px 50px;
+    }
+    &__items li::before{
+        content: '';
+        background: #000;
+        border-radius: 50%;
+        width: 5px;
+        height: 5px;
+        margin:0px 6px 3px 0px;
+        display: inline-block;
+    }
+    &__items li>ul>li::before{
+        content: '';
+        background: rgb(255, 255, 255);
+        border-radius: 50%;
+        border: 1px black solid;
+        width: 5px;
+        height: 5px;
+        margin:0px 6px 3px 0px;
+        display: inline-block;
+        // list-style-type: circle;
+    }
+     &__items ul ~ p{
+        color:red;
+        margin-bottom: 5px;
+    }
+    &__items a[href="https://github.com/Ch1ChaGL?tab=packages"]{
+        color:green;
+    }
+}
+    .items8 {
+        & pre>span{
+            color:green;
+        }
+        .example8{
+            @include example(20px, Times,40px );
+                &__items{
+                    & p{
+                        color:red;
+                        margin-bottom: 5px; 
+                    }
+                    & a[href*="Ch1ChaGL"]{
+                        color:green;
+                    }
+                } 
+            }
+        }
+    .example9{
+        @include example(20px, Times,40px );
+            &__items{
+                & a[href^="http"]{
+                    color:green;
+                }
+                & p{
+                    color:red;
+                    margin-bottom: 50px; 
+                    font-size: 20px;
+                }
+            }
+        }
+    .example10{
+        @include example(20px, Times,40px );
+        &__items{
+            & a[href$=".jpg"]{
+                color:green;
+            }
+            & p{
+                color:red;
+                margin-bottom: 5px; 
+                }
+            }
+        }
+    .example11{
+        @include example(20px, Times,40px );
+        &__items{
+            & a[data-fyletype="image"]{
+                color:green;
+            }
+            & p{
+                color:red;
+                margin-bottom: 5px; 
+                }
+            }
+        }
+    .items12{
+        & pre>span{
+            color:green;
+        }
+        .example12{
+            @include example(20px, Times,40px );
+            &__items{
+                & a[data-info~="external"]{
+                    color:red;
+                }
+                & a[hui~="pizda"]{
+                    color: #547564;;
+                }
+                & p{
+                    color:black;
+                    margin-bottom: 5px; 
+                }
+            }
+        }
+    }
+    .example13{
+        @include example(20px, Times,40px );
+        &__items{
+            & li{
+                margin-bottom: 5px; 
+            }
+            & p{
+                margin-bottom: 5px; 
+            }
+            div:not(#test){
+                color:green;
+            }
+        }
+    }
+    .example14{
+        @include example(20px, Times,40px );
+        &__items{
+            & ul ul{
+                padding-left: 10px;
+            }
+            & ul{
+                margin-bottom: 10px;
+            } 
+            & li{
+                margin-bottom: 5px; 
+                &::before{
+                    content: '';
+                    width: 5px;
+                    height: 5px;
+                    display: inline-block;
+                    border: #000 1px solid;
+                    background: #fff;
+                    margin-bottom: 2px;
+                }
+            }
+            & ul:nth-of-type(3){
+                border: #000 5px dotted;
+            }
+        }
+    }
+    .example15{
+        @include example(20px, Times,40px );
+        &__items{
+            & li{
+                margin-bottom: 5px;   
+            }
+            & p{
+                margin-bottom: 10px;   
+            }
+            & ul:first-of-type > li:last-child{
+                color:red;
+            }
+        }
+    }
 
 }
