@@ -1,0 +1,25 @@
+@import url(../sass/null.css);
+.block{
+
+}
+.block__row{
+    border:20px solid #ece89d;
+    margin:0px 0px 20px 0px;
+    display: flex;
+
+}
+.block__column{
+    border:20px solid #5e5373;
+    
+}
+.block__column_1{}
+.block__column_2{}
+.block__column_3{}
+.block__item{
+    background: #18b5a4;
+    padding:20px 50px;
+    font-size: 50px;
+    color:#fff;
+    font-weight: 700;
+    text-align: center;
+}
