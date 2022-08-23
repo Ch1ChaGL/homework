@@ -157,6 +157,7 @@ flex:1 1 auto;
 
 
 .vertical {
+    border: 1px red solid;
 padding:50px 0;
     &__title {
         text-align: center;
@@ -164,12 +165,15 @@ padding:50px 0;
     }
 
     &__body {
+        // border: 1px red solid;
         max-width:990px ;
         margin:0 auto;
     }
 
     &__row {
+        // border:20px red solid;
         display: flex;
+        // align-items: stretch;
         margin: 0 -22.5px;
     }
 
@@ -177,6 +181,9 @@ padding:50px 0;
         flex:0 1 33.333%;
         padding: 0px 22.5px;
         display: flex;
+    // justify-content: space-between;
+        border: 1px red solid;
+        flex-wrap: nowrap;
     }
 
     &__item {
