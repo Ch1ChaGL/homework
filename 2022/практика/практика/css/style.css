@@ -1,0 +1,62 @@
+@import url(../sass/null.css);
+.container {
+  max-width: 802px;
+  border: 1px red solid;
+  margin: 0 auto;
+}
+
+.container-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -10px;
+}
+
+.columns {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.33%;
+          flex: 0 0 33.33%;
+  padding: 0 10px;
+}
+
+.block1 {
+  padding: 0 10px;
+  border: 1px red solid;
+  height: 250px;
+  background: #000;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.block2 {
+  background: green;
+  border: 1px yellow solid;
+  height: 250px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-size: 40px;
+}
+
+.row2 {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
