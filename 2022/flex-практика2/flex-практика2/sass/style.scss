@@ -22,14 +22,15 @@ background: #A041DB;
     &__row {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     &__image {
         
     //    background: #000;
        & img{
-        width: 100%; /* Ширина изображений */
-        height: 100%; /* Высота изображении */
+        // width: 100%; /* Ширина изображений */
+        // height: 100%; /* Высота изображении */
         object-fit: cover; /* Вписываем фотографию в область */
         height: 70px;
         width: 70px;
@@ -41,6 +42,7 @@ background: #A041DB;
 
     &__menu {
         display: flex;
+        flex-wrap: wrap;
         align-items:center ;
         margin: 0 -10px;
         padding-right: 10px;
@@ -74,6 +76,7 @@ background: #A041DB;
     }
     &__row {
         display: flex;
+        flex-wrap: wrap;
         margin: 0 -10px;
     }
 
@@ -123,6 +126,7 @@ background: #A041DB;
     &__column--big {
         padding: 0 10px;
         flex: 0 1 50%;
+        
     }
 
     &__item--big {
@@ -143,8 +147,8 @@ background: #A041DB;
         & img{
             
             border: 3px black solid;
-            width: 100%; /* Ширина изображений */
-            height: 100%; /* Высота изображении */
+            // width: 100%; /* Ширина изображений */
+            // height: 100%; /* Высота изображении */
             object-fit: cover; /* Вписываем фотографию в область */
             height: 150px;
             max-width: 176px;
