@@ -1,0 +1,45 @@
+.header {
+position: absolute;
+width: 100%;
+z-index: 50;
+    &__row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__menu {
+    }
+
+    &__logo {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        @include tr(-50%,0px,0px);
+    }
+}
+.menu {
+
+    &__body {
+    }
+
+    &__list {
+        display: flex;
+        li{
+            font-size: 13px;    
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+                a{
+                    color:#4d4959;
+                }
+        }
+    }
+
+    &__link {
+    }
+}
+.menu-icon {
+}
+.icon-menu {
+}
