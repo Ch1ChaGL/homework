@@ -16,3 +16,4 @@ $('.icon-menu').click(function(event){
     $('.menu__body').toggleClass('active');
     $('body').toggleClass('lock');
 });
+
