@@ -1,0 +1,67 @@
+@import url(/css/null.css);
+.button {
+  text-decoration: none;
+  display: inline-block;
+  line-height: 30px;
+  padding: 0 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  border-radius: 10px;
+  top: 0;
+  position: relative;
+}
+
+.button__1 {
+  border-radius: 10px;
+  color: #fff;
+  background: #5e5373;
+  -webkit-box-shadow: 0 5px 0px #3c354a;
+          box-shadow: 0 5px 0px #3c354a;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+.button__1:hover {
+  top: 2px;
+  -webkit-box-shadow: 0 3px 0 #3c354a;
+          box-shadow: 0 3px 0 #3c354a;
+  background: #18b5a4;
+}
+
+.content {
+  padding: 50px;
+  background: #000;
+}
+
+.content__circle {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  left: 0;
+  -webkit-animation-name: white__circle;
+          animation-name: white__circle;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+@-webkit-keyframes white__circle {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 500px;
+  }
+}
+
+@keyframes white__circle {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 500px;
+  }
+}
