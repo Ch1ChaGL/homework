@@ -1,0 +1,58 @@
+@import url(/css/null.css);
+body{
+    padding: 30px;
+    background: #000;
+}
+p{
+    text-transform: uppercase;
+}
+.test{
+    transition: all ease 1s;
+    height: 100px;
+    width: 100px;
+    background: #fff;
+    margin-bottom: 30px;
+   
+}
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+
+//translate
+.block{
+    &:hover{
+        transform: translate(20px,20px);
+    }
+}
+
+//scale
+.block1 {
+    &:hover{
+        transform: scale(0,0);
+    }
+    
+}
+
+//rotate
+.block2{
+    &:hover{
+        transform: rotate(45deg);
+    }
+}
+.block3{
+    &:hover{
+        transform: skew(0deg,30deg);
+    }
+}
+
+
+.block4{
+    &:hover{
+        transform: matrix(1, 0, 3,5,20,20);
+    }
+}
