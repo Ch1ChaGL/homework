@@ -1,0 +1,61 @@
+@import url(/css/null.css);
+body{
+    background: rgb(54, 53, 53);
+    color: #fff;
+}
+.wrapper {
+  
+}
+.content {
+    padding: 30px 3%;
+}
+h1,h2{
+    font-size: 45px;
+    margin-bottom: 60px;
+
+}
+.grid {
+    color:#fff;
+font-size: 30px;
+position: relative;
+margin-bottom: 40px;
+
+		&__body {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows:300px 200px;
+            margin-bottom: 70px;
+		}
+
+		&__item {
+            text-align: center;
+            border: 2px dashed rgba(255,255,255,0.2);
+            padding: 30px;
+		}
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: "header header"
+                          "side content";
+}
+.grid-header {
+    border: 2px dashed rgba(255,255,255,0.2);
+    padding: 30px;
+    margin-bottom: 20px;
+    grid-area: header;
+}
+.grid-side {
+    border: 2px dashed rgba(255,255,255,0.2);
+    padding: 30px;
+    margin-bottom: 20px;
+    grid-area: side;
+}
+.grid-content {
+    border: 2px dashed rgba(255,255,255,0.2);
+    padding: 30px;
+    margin-bottom: 20px;
+    grid-area: content;
+}
