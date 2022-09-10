@@ -1,25 +1,25 @@
 @import url(/css/null.css);
 .wrapper {
+  background: rgb(73, 71, 71);
+  min-height: 100%;
   display: -ms-grid;
   display: grid;
-  min-height: 100%;
   -ms-grid-columns: 1fr;
       grid-template: minmax(100px, auto) 1fr minmax(70px, auto)/1fr;
       grid-template-areas: "header" "main" "footer";
-  background: rgb(71, 70, 70);
 }
 
 .header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  grid-area: header;
-  background: #794f45;
-  padding: 15px;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr;
-  -ms-grid-columns: 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
-      grid-template: 1fr/1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+  -ms-grid-columns: 1fr minmax(300px, auto) minmax(1100px, auto) 1fr;
+      grid-template: 1fr/1fr minmax(300px, auto) minmax(1100px, auto) 1fr;
+  grid-area: header;
+  padding: 15px;
+  background: rgb(150, 91, 91);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -51,60 +51,60 @@
 .main {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  grid-area: main;
-  padding: 30px 15px;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr;
   -ms-grid-columns: 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
       grid-template: 1fr/1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+  grid-area: main;
+  margin-bottom: 30px;
 }
 
 .sidebar {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
-  background: #7a956b;
-  padding: 30px 20px;
+  padding: 15px 30px;
+  background: rgb(81, 173, 173);
 }
 .sidebar__list li {
   margin-bottom: 15px;
-  font-size: 18px;
 }
 .sidebar__link {
   color: #fff;
+  font-size: 20px;
 }
 
 .content {
-  padding-left: 30px;
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;
+  padding: 0px 0px 0px 30px;
 }
 .content__title {
-  margin-bottom: 30px;
-  font-size: 30px;
+  font-size: 34px;
   color: #fff;
-}
-.galery {
   margin-bottom: 30px;
 }
-.galery__title {
+.gallery {
+  margin-bottom: 30px;
+}
+.gallery__title {
   font-size: 24px;
   color: #fff;
   margin-bottom: 30px;
 }
-.galery__items {
+.gallery__items {
   display: -ms-grid;
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
-.galery__item {
+.gallery__item {
   position: relative;
   padding: 0px 0px 85% 0px;
 }
-.galery__item img {
+.gallery__item img {
   position: absolute;
   top: 0;
   left: 0;
@@ -113,34 +113,35 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-.galery__item-big {
-  -ms-grid-column-span: 2;
-  grid-column: span 2;
+.gallery__item-big {
   -ms-grid-row-span: 2;
   grid-row: span 2;
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
 }
 
 .products__title {
   font-size: 24px;
-  color: #fff;
   margin-bottom: 30px;
+  color: #fff;
 }
 .products__items {
-  -webkit-column-gap: 30px;
-     -moz-column-gap: 30px;
-          column-gap: 30px;
-  row-gap: 50px;
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  row-gap: 50px;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  grid-auto-rows: 1fr;
 }
 .products__item {
   display: -ms-grid;
   display: grid;
   grid-auto-flow: row;
-  -ms-grid-rows: auto 1fr minmax(70px, auto);
+  -ms-grid-rows: auto 1fr minmax(40px, auto);
   -ms-grid-columns: 1fr;
-      grid-template: auto 1fr minmax(70px, auto)/1fr;
+      grid-template: auto 1fr minmax(40px, auto)/1fr;
 }
 .products__image {
   position: relative;
@@ -157,27 +158,26 @@
      object-fit: cover;
 }
 .products__name {
-  font-size: 18px;
   color: #fff;
+  font-size: 18px;
   margin-bottom: 15px;
 }
 .products__button {
-  background: #77608d;
-  color: #fff;
-  padding: 15px 30px;
   -ms-grid-column-align: start;
       justify-self: start;
+  padding: 15px;
+  color: #fff;
   text-transform: uppercase;
+  background: rgb(55, 108, 161);
 }
 
 .footer {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  background: #77608d;
-  color: #fff;
+  grid-area: footer;
+  background: rgb(177, 123, 182);
   display: -ms-grid;
   display: grid;
-  grid-area: footer;
   -ms-grid-rows: 1fr;
   -ms-grid-columns: 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
       grid-template: 1fr/1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
@@ -189,10 +189,15 @@
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
+  font-size: 18px;
+  color: #fff;
 }
 .footer__text {
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;
-  text-align: end;
+  font-size: 18px;
+  color: #fff;
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
