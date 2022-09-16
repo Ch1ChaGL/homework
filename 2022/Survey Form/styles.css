@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--color-darkblue);
+    background-image: linear-gradient( 115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7) ), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;}
+label{
+    display: block;
+    margin: 3px;
+}
+
+fieldset{
+    border: none;
+}
+.container{
+    
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+#title{
+    font-size: 30px;
+    text-align: center;
+}
+#description{
+    text-align: center;
+    font-size: 18px;
+}
+#name ,#email,#number{
+    width: 100%;
+    height: 25px;
+    margin: 13px 0px 5px 0px;
+}
+.form-group{
+    background: rgba(27, 27, 50, 0.8);
+    padding: 30px;
+}
+.user-recommend,.prefer{
+    padding-top: 0px;
+}
+
+#dropdown{
+    display: block;
+    width: 100%;
+    height: 30px;
+}
+#dropdown__fieldset{
+    padding-right: 3px;
+}
+.form-control{
+    border-radius: 3px;
+}
+.checkbox{
+    margin-bottom: 30px;
+}
+#comments{
+    width: 100%;
+}
+#submit{
+    display: block;
+    width: 100%;
+    
+}
+.knopka{
+    padding: 0px 11.5px;
+}
+#submit{
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: #37af65;
+    color: inherit;
+    cursor: pointer;
+    border: none;
+}
