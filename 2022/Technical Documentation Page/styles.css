@@ -1,0 +1,14 @@
+/* @media(max-width:1000px){}
+nav{
+    position: fixed;
+    top:0;
+    left:0;
+}
+.nav-link{
+    display: block;
+    text-decoration: none;
+}
+#main-doc{
+    position: absolute;
+    padding-left: 330px;
+} */
