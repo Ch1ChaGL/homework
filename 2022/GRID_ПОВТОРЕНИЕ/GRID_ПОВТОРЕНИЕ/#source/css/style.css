@@ -1,0 +1,52 @@
+@charset "UTF-8";
+@import url(/GRID_ПОВТОРЕНИЕ/GRID_ПОВТОРЕНИЕ/css/null.css);
+body {
+  background: rgb(68, 62, 62);
+}
+
+.content {
+  padding: 30px 3%;
+}
+
+.grid {
+  font-size: 30px;
+  position: relative;
+  margin-bottom: 40px;
+}
+.grid__body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+.grid__item {
+  padding: 30px;
+  text-align: center;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: 100px 1fr;
+  grid-template-areas: "header header" "side content";
+}
+
+.grid-header,
+.grid-side,
+.grid-content {
+  padding: 30px;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  margin-bottom: 15px;
+}
+
+.grid-header {
+  grid-area: header;
+}
+
+.grid-side {
+  grid-area: side;
+}
+
+.grid-content {
+  grid-area: content;
+}

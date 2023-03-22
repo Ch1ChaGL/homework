@@ -1,0 +1,62 @@
+@import url(/css/null.css);
+body {
+  padding: 30px;
+  background: #000;
+}
+
+p {
+  text-transform: uppercase;
+}
+
+.test {
+  -webkit-transition: all ease 1s;
+  -o-transition: all ease 1s;
+  transition: all ease 1s;
+  height: 100px;
+  width: 100px;
+  background: #fff;
+  margin-bottom: 30px;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.block:hover {
+  -webkit-transform: translate(20px, 20px);
+      -ms-transform: translate(20px, 20px);
+          transform: translate(20px, 20px);
+}
+
+.block1:hover {
+  -webkit-transform: scale(0, 0);
+      -ms-transform: scale(0, 0);
+          transform: scale(0, 0);
+}
+
+.block2:hover {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.block3:hover {
+  -webkit-transform: skew(0deg, 30deg);
+      -ms-transform: skew(0deg, 30deg);
+          transform: skew(0deg, 30deg);
+}
+
+.block4:hover {
+  -webkit-transform: matrix(1, 0, 3, 5, 20, 20);
+      -ms-transform: matrix(1, 0, 3, 5, 20, 20);
+          transform: matrix(1, 0, 3, 5, 20, 20);
+}

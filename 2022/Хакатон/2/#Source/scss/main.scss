@@ -1,0 +1,27 @@
+@import "test.scss";
+
+//Шаблоны
+%test {
+  border-bottom: 5px solid red;
+}
+
+@mixin fontz($f) {
+  font-size: $f;
+}
+body {
+  background-color: aqua;
+  @extend %test;
+  @include fontz(50px);
+}
+
+.asda {
+}
+.test {
+  &__name {
+    
+    &_big {
+    }
+  }
+}
+.sdfsdf {
+}

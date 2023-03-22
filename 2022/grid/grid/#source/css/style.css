@@ -1,0 +1,18 @@
+@import url(/grid/css/null.css);
+.content {
+  padding: 30px 3%;
+}
+
+.grid {
+  font-size: 30px;
+  position: relative;
+  margin-bottom: 40px;
+}
+.grid__body {
+  display: grid;
+}
+.grid__item {
+  text-align: center;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  padding: 30px;
+}

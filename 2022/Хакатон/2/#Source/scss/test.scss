@@ -1,0 +1,8 @@
+li {
+  color: red;
+}
+li::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+}
