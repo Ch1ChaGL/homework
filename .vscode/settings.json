@@ -1,15 +1,13 @@
 {
-    "liveSassCompile.settings.generateMap": false,
-    "liveSassCompile.settings.formats": [
-        {
-            "format": "expanded",
-            "autoprefix": "last 5 version",
-            "extensionName": ".css",
-            "savePath": "~/../css"
-        }
-    ],
-    "liveSassCompile.settings.autoprefix": [
-        "> 1%",
-        "last 5 versions"
-    ]
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "autoprefix": "last 5 version",
+      "extensionName": ".css",
+      "savePath": "~/../css"
+    }
+  ],
+  "liveSassCompile.settings.autoprefix": ["> 1%", "last 5 versions"],
+  "cSpell.words": ["userpassword"]
 }
